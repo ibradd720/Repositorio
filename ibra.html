@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Inscripción</title>
+</head>
+
+<body>
+  <h1>Formulario de Inscripción</h1>
+
+  <form>
+
+    <!-- DATOS PERSONALES -->
+    <fieldset>
+      <legend>Datos personales</legend>
+
+      <label>Nombre completo:
+        <input type="text" name="nombre" required placeholder="Tu nombre">
+      </label><br><br>
+
+      <label>Edad:
+        <input type="number" name="edad" min="1" max="100" required>
+      </label><br><br>
+
+      <label>Correo electrónico:
+        <input type="email" name="email" required placeholder="correo@ejemplo.com">
+      </label><br><br>
+
+      <label>Teléfono (opcional):
+        <input type="text" name="telefono" placeholder="+34 600 000 000">
+      </label>
+    </fieldset>
+
+    <br>
+
+    <!-- INFORMACIÓN ACADÉMICA -->
+    <fieldset>
+      <legend>Información académica</legend>
+
+      <label>Curso:
+        <select name="curso" required>
+          <optgroup label="Informática">
+            <option value="web">Desarrollo Web</option>
+            <option value="python">Python</option>
+          </optgroup>
+          <optgroup label="Diseño">
+            <option value="ux">UX/UI</option>
+            <option value="grafico">Diseño Gráfico</option>
+          </optgroup>
+        </select>
+      </label>
+      <br><br>
+
+      <label>Turno:</label><br>
+      <label><input type="radio" name="turno" value="mañana" checked> Mañana</label>
+      <label><input type="radio" name="turno" value="tarde"> Tarde</label>
+      <label><input type="radio" name="turno" value="online"> Online</label>
+      <br><br>
+
+      <label>Área de interés:
+        <input list="areas" name="area">
+        <datalist id="areas">
+          <option value="Desarrollo Web">
+          <option value="Ciencia de Datos">
+          <option value="Diseño Gráfico">
+          <option value="Ciberseguridad">
+        </datalist>
+      </label>
+      <br><br>
+
+      <label>Nivel de motivación:
+        <input type="range" name="motivacion" min="0" max="10">
+      </label>
+    </fieldset>
+
+    <br>
+
+    <!-- DOCUMENTACIÓN -->
+    <fieldset>
+      <legend>Documentación</legend>
+
+      <label>Subir archivo:
+        <input type="file" name="archivo">
+      </label>
+      <br><br>
+
+      <label>
+        <input type="checkbox" name="acepto" required>
+        Acepto el uso de mis datos personales
+      </label>
+    </fieldset>
+
+    <br>
+
+    <button type="submit">Enviar</button>
+    <button type="reset">Limpiar</button>
+
+  </form>
+</body>
+</html>
